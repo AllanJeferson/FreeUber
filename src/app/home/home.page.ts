@@ -6,7 +6,8 @@ import {
 } from '@angular/core';
 import {
   Platform,
-  LoadingController
+  LoadingController,
+  NavController
 } from '@ionic/angular';
 import {
   Environment,
@@ -19,6 +20,8 @@ import {
   Geocoder,
   ILatLng
 } from '@ionic-native/google-maps';
+
+
 
 
 
@@ -63,8 +66,9 @@ export class HomePage implements OnInit {
   constructor(
     private platform: Platform,
     private loadingCtrl: LoadingController,
-    private ngZone: NgZone
-  ) {}
+    private ngZone: NgZone,
+    private navCtrl: NavController
+    ) {}
 
 
 
@@ -257,5 +261,6 @@ export class HomePage implements OnInit {
       console.error(error);
     }
   }
+  
 
 }
