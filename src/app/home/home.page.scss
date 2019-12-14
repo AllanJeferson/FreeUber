@@ -97,57 +97,59 @@ ion-list {
     background-color: #fff;
 }
 
-ion-list,
-.request-car {
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
+// ion-list,
+// .request-car {
+//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+// }
 
-.request-car {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 20px;
-    height: 90%;
-    background-color:#fff;
-    animation-delay: 2s;
+// .request-car {
+//     display: flex;
+//     position: relative;
+//     left: 0;
+//     right: 0;
+//     bottom: 20px;
+//     height: 90%;
+//     background-color:#fff;
+   
 
-
-    img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: block;
-        margin: 0 auto -15px auto;
-    }
-
-
-    span {
-        display: block;
-    }
-
-    ion-grid {
-        span {
-            font-size: 12px;
+//     img {
+//         width: 50px;
+//         height: 50px;
+//         border-radius: 50%;
+//         display: block;
+//         margin: 0 auto -15px auto;
+//     }
 
 
-            &.category {
-                color: #fff;
-                background-color: #333;
-                margin-top: 0px;
-                padding: 3px 5px;
-                border-radius: 10px;
-                font-weight: bold;
-                display: inline-block;
-            }
-        }
-    }
+//     span {
+//         display: block;
+//     }
 
-}
+//     ion-grid {
+//         span {
+//             font-size: 12px;
 
 
-ion-content {
-    --overflow: hidden;
-}
+//             &.category {
+//                 color: #fff;
+//                 background-color: #333;
+//                 margin-top: 0px;
+//                 padding: 3px 5px;
+//                 border-radius: 10px;
+//                 font-weight: bold;
+//                 display: inline-block;
+//             }
+//         }
+//     }
+
+// }
+
+
+// ion-content {
+//     --overflow: hidden;
+// }
+
+
 
 
 .telev:hover {
@@ -193,15 +195,15 @@ ion-content {
 
 
 .telev {
-    background: #3b9fbd;
+    background: #ffffffa9;
     height: 42pt;
     width: 42pt;
     position: absolute;
     bottom: 425px;
     right: 5px;
     opacity: 1;
-    -webkit-animation: mymove 5s;
-    animation: mymove 5s;
+    -webkit-animation: mymove 0s;
+    animation: mymove 0s;
     border-radius: 30px;
     text-align: center;
     color: transparent;
@@ -213,11 +215,11 @@ ion-content {
     display: -webkit-box;
     display: flex;
     transition-property: width, height, color;
-    transition-duration: 2s;
+    transition-duration: 1s;
     -webkit-transition-property: width, height, color;
-    -webkit-transition-duration: 2s;
-    -webkit-transition-delay: 1s;
-    transition-delay: 1s;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
     -webkit-box-align: center;
     align-items: center;
 
@@ -363,20 +365,43 @@ ion-content {
 }
 
 
+// css allan comessa aqui 
+
+
+
+.carros {
+    display: -webkit-box;
+    display: flex;
+    position: relative;
+    width: 98%;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background: snow;
+}
+
+
+
+
+
 .grid{
-    // background-color: bisque;
     display: -webkit-box;
     display: flex;
     position: relative;
     -webkit-box-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
-    /* height: 204px; */
     flex-wrap: wrap;
     overflow-y: scroll;
+    
 }
+    
+
 
 
 .car{
@@ -387,7 +412,7 @@ ion-content {
     align-items: center;
     -webkit-box-pack: center;
     justify-content: center;
-    width: 100%;
+    width: 80%;
     height: auto;
     flex-wrap: wrap;
     background-color: aliceblue;
