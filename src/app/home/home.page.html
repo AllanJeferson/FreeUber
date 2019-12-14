@@ -1,0 +1,217 @@
+<ion-header>
+    <div class="titulo"> FreeYou </div>
+</ion-header>
+
+<ion-content>
+    <!-- <div id="favoritos"> -->
+<!-- 
+    <div class="telev">
+
+        <img class="av1" src="../../assets/avatar.png">
+
+    </div>
+
+    <div class="telev1">
+
+        <img class="av1" src="../../assets/avatar.png">
+
+    </div>
+
+    <div class="telev2">
+
+        <img class="av1" src="../../assets/avatar.png">
+
+    </div>
+
+
+    <div class="telev3">
+
+        <img class="av1" src="../../assets/avatar.png">
+
+    </div>
+
+
+    <div class="telev4">
+
+        <img class="av1" src="../../assets/avatar.png">
+
+    </div>
+
+ -->
+
+    <!-- </div> -->
+    <div #map>
+
+        <div class="topo" [hidden]="destination">
+            <div class="menu">canto </div>
+            <div class="bus">
+
+                <ion-searchbar [(ngModel)]="search" (ionChange)="searchChanged()" placeholder="Para onde?">
+                </ion-searchbar>
+            </div>
+            <div class="dir"></div>
+        </div>
+       
+
+
+
+        <ion-list class="ion-margin-horizontal" [hidden]="!search.length">
+
+            <ion-item (click)="calcRoute(result)" *ngFor="let result of searchResults">
+
+                {{ result.description }}
+
+            </ion-item>
+
+        </ion-list>
+
+
+
+
+
+        <div class="request-car ion-padding ion-text-center" [hidden]="!destination">
+<div class="voltar">
+            <ion-button class="ion-margin-top" (click)="back()" color="dark" fill="clear" size="small"
+           >
+            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+        </ion-button>
+</div>
+
+
+            <span>Distancia {{allan}}</span>
+
+            <span>Tempo médio de viagem {{yasmin}}</span>
+            <span>Valor médio dessa viagem {{media1}}</span>
+
+            <div class="grid">
+                <div class="car">
+                    <div class="foto">
+                        foto
+                    </div>
+                    <div class="desc">
+                        descrição do veiculo
+                    </div>
+                    <div class="tempo">
+                        tempo para chegar 02:00 valor {{valor1}}
+                    </div>
+                    <div class="but">
+                        <ion-button color="dark" expand="block" style="
+         width: 80%;     height: 30px;">
+                            Confirmar Corrida
+                        </ion-button>
+                    </div>
+                </div>
+
+                <div class="car">
+                        <div class="foto">
+                            foto
+                        </div>
+                        <div class="desc">
+                            descrição do veiculo
+                        </div>
+                        <div class="tempo">
+                            tempo para chegar 02:50 valor {{valor2}}
+                        </div>
+                        <div class="but">
+                            <ion-button color="dark" expand="block" style="
+             width: 80%;    height: 30px;">
+                                Confirmar Corrida
+                            </ion-button>
+                        </div>
+                    </div>
+
+
+                    <div class="car">
+                            <div class="foto">
+                                foto
+                            </div>
+                            <div class="desc">
+                                descrição do veiculo
+                            </div>
+                            <div class="tempo">
+                                tempo para chegar 03:20 valor {{valor3}}
+                            </div>
+                            <div class="but">
+                                <ion-button color="dark" expand="block" style="
+                 width: 80%;    height: 30px;">
+                                    Confirmar Corrida
+                                </ion-button>
+                            </div>
+                        </div>
+
+
+                        <div class="car">
+                                <div class="foto">
+                                    foto
+                                </div>
+                                <div class="desc">
+                                    descrição do veiculo
+                                </div>
+                                <div class="tempo">
+                                    tempo para chegar 01:00 valor  {{valor4}}
+                                </div>
+                                <div class="but">
+                                    <ion-button color="dark" expand="block" style="
+                     width: 80%;    height: 30px;">
+                                        Confirmar Corrida
+                                    </ion-button>
+                                </div>
+                            </div>
+
+                           
+
+
+            </div>
+            <!-- <ion-grid class="ion-margin-vertical">
+                <ion-row>
+
+
+                    <ion-col size="3">
+                        <img src="https://via.placeholder.com/65/cccccc">
+                        <span class="category">UberX</span>
+                        <span>{{valor1}}</span>
+
+
+
+
+                    </ion-col>
+
+
+                    <ion-col size="3">
+                        <img src="https://via.placeholder.com/65/cccccc">
+                        <span class="category">Select</span>
+                        <span>{{valor2}}</span>
+                    </ion-col>
+
+
+
+
+                    <ion-col size="3">
+                        <img src="https://via.placeholder.com/65/cccccc">
+                        <span class="category">Black</span>
+                        <span>{{valor3}}</span>
+                    </ion-col>
+
+
+
+                    <ion-col size="3">
+                        <img src="https://via.placeholder.com/65/cccccc">
+                        <span class="category">Black</span>
+                        <span>{{valor4}}</span>
+                    </ion-col>
+
+
+
+                </ion-row>
+            </ion-grid>
+
+
+            <ion-button color="dark" expand="block">
+                Confirmar Corrida
+            </ion-button> -->
+
+
+
+        </div>
+    </div>
+</ion-content>
