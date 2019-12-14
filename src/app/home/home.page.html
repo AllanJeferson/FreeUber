@@ -1,8 +1,8 @@
 
 
 <ion-content>
-    <!-- <div id="favoritos"> -->
-<!-- 
+   <div id="favoritos"   [hidden]="!destination"> 
+
     <div class="telev">
 
         <img class="av1" src="../../assets/avatar.png">
@@ -35,9 +35,9 @@
 
     </div>
 
- -->
 
-    <!-- </div> -->
+
+    </div> 
     <div #map>
 
         <div class="topo" [hidden]="destination">
