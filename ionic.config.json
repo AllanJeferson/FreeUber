@@ -1,7 +1,8 @@
 {
   "name": "uber",
   "integrations": {
-    "cordova": {}
+    "cordova": {},
+    "capacitor": {}
   },
   "type": "angular"
 }
