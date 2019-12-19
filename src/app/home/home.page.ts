@@ -265,6 +265,7 @@ export class HomePage implements OnInit {
     try {
       await this.map.clear();
       this.destination = null;
+      this.ok = null ;
       this.addOriginMarker();
     } catch (error) {
       console.error(error);
