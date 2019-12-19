@@ -6,8 +6,7 @@ import {
 } from '@angular/core';
 import {
   Platform,
-  LoadingController,
-  NavController
+  LoadingController
 } from '@ionic/angular';
 import {
   Environment,
@@ -20,8 +19,6 @@ import {
   Geocoder,
   ILatLng
 } from '@ionic-native/google-maps';
-
-
 
 
 
@@ -61,14 +58,18 @@ export class HomePage implements OnInit {
   valor33: any;
   public media: any;
   public media1: any;
+  public ok:  string = "" ;
+  public ok1: string;
+  
+  
+
 
 
   constructor(
     private platform: Platform,
     private loadingCtrl: LoadingController,
-    private ngZone: NgZone,
-    private navCtrl: NavController
-    ) {}
+    private ngZone: NgZone
+  ) {}
 
 
 
@@ -157,7 +158,7 @@ export class HomePage implements OnInit {
     });
 
   }
-
+  
   async calcRoute(item: any) {
     this.search = '';
     this.destination = item;
@@ -166,6 +167,7 @@ export class HomePage implements OnInit {
       address: this.destination.description
 
     });
+
 
 
     let markerDestination: Marker = this.map.addMarkerSync({
@@ -247,9 +249,16 @@ export class HomePage implements OnInit {
 
 
   }
+ 
+ 
 
-
-
+  async corrida()
+  {
+    this.ok = "";
+   
+    this.ok = 'teste';
+  }
+  
 
 
   async back() {
@@ -260,7 +269,7 @@ export class HomePage implements OnInit {
     } catch (error) {
       console.error(error);
     }
+    this.ok = " ";
   }
-  
 
 }
