@@ -71,8 +71,10 @@ export class HomePage implements OnInit {
     private ngZone: NgZone
   ) {}
 
-
-
+  option1 = {
+    loop: false,
+    direction: 'vertical'
+};
 
   ngOnInit() {
     this.mapElement = this.mapElement.nativeElement;

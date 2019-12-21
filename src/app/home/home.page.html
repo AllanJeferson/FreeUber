@@ -79,12 +79,18 @@
                 </ion-button>
             </div>
 
+            <div class="car">
+              <div class="tit">
 
-            <span>Distancia {{allan}}</span>
-
-            <span>Tempo médio de viagem {{yasmin}}</span>
-            <!-- <span>Valor médio dessa viagem {{media1}}</span> -->
-
+              <div>
+                    <span>Distancia {{allan}}</span>
+                </div>
+                <div>
+                    <span>Tempo médio de viagem {{yasmin}}</span>
+                    <!-- <span>Valor médio dessa viagem {{media1}}</span> -->
+                </div>
+            </div>
+            </div>
             <ion-list [hidden]="ok">
                 <ion-item>
                     <ion-label>Motorista Mulher</ion-label>
@@ -110,13 +116,16 @@
                     <ion-label>Veiculo adapitado para cadeirante </ion-label>
                     <ion-toggle color="primary"></ion-toggle>
                 </ion-item>
-
+                
                 <ion-button color="dark" (click)="corrida()" expand="block" style="
             width: 100%;     height: 30px;">
                     OK
                 </ion-button>
             </ion-list>
             <div class="grid" [hidden]="!ok">
+
+                <ion-slides pager="true"  [options]="option1" >
+                    <ion-slide>
                 <div class="car">
                     <!-- <div class="foto">
                         <img src="../../assets/01(1).jpg" alt="" >
@@ -138,7 +147,8 @@
                         </div>
                     </div>
                 </div>
-
+            </ion-slide>
+        <ion-slide>
                 <div class="car">
                     <div class="foto">
                         <img src="../../assets/01(2).jpg" alt="">
@@ -148,7 +158,7 @@
                             <h3> Fiat Freemont 2015</h3>
                         </div>
                         <div class="cat">
-                           7 lugares
+                            7 lugares
                         </div>
                         <div class="tempo">
                             Tempo para chegar 02:50
@@ -159,8 +169,8 @@
                         </div>
                     </div>
                 </div>
-
-
+            </ion-slide>
+        <ion-slide>
                 <div class="car">
                     <div class="foto">
                         <img src="../../assets/01(3).jpg" alt="">
@@ -179,8 +189,8 @@
                         </div>
                     </div>
                 </div>
-
-
+            </ion-slide>
+        <ion-slide>
                 <div class="car">
                     <div class="foto">
                         <img src="../../assets/01(4).jpg" alt="">
@@ -201,8 +211,8 @@
                         </div>
                     </div>
                 </div>
-
-
+            </ion-slide>
+        </ion-slides>
 
 
             </div>
