@@ -58,6 +58,11 @@ export class HomePage implements OnInit {
   valor33: any;
   public media: any;
   public media1: any;
+  public ok:  string = "" ;
+  public ok1: string;
+  
+  
+
 
 
   constructor(
@@ -153,7 +158,7 @@ export class HomePage implements OnInit {
     });
 
   }
-
+  
   async calcRoute(item: any) {
     this.search = '';
     this.destination = item;
@@ -162,6 +167,7 @@ export class HomePage implements OnInit {
       address: this.destination.description
 
     });
+
 
 
     let markerDestination: Marker = this.map.addMarkerSync({
@@ -243,19 +249,28 @@ export class HomePage implements OnInit {
 
 
   }
+ 
+ 
 
-
-
+  async corrida()
+  {
+    this.ok = "";
+   
+    this.ok = 'teste';
+  }
+  
 
 
   async back() {
     try {
       await this.map.clear();
       this.destination = null;
+      this.ok = null ;
       this.addOriginMarker();
     } catch (error) {
       console.error(error);
     }
+   
   }
 
 }
