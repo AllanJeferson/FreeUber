@@ -244,7 +244,7 @@ export class HomePage implements OnInit {
       await this.map.moveCamera({
         target: points
       });
-      this.map.panBy(0, -100);
+      this.map.panBy(0, 100);
 
 
 
