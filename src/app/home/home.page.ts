@@ -60,6 +60,7 @@ export class HomePage implements OnInit {
   public media1: any;
   public ok:  string = "" ;
   public ok1: string;
+  public escolha: string;
   
   
 
@@ -262,6 +263,12 @@ export class HomePage implements OnInit {
   }
   
 
+  async aceita()
+  {
+    this.escolha = "";
+   
+    this.escolha = 'teste';
+  }
 
   async back() {
     try {

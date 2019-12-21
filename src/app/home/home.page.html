@@ -70,7 +70,7 @@
 
 
 
-
+<div  [hidden]="escolha" >
 
         <div class="request-car ion-padding ion-text-center" [hidden]="!destination">
             <div class="voltar">
@@ -126,7 +126,7 @@
 
                 <ion-slides pager="true"  [options]="option1" >
                     <ion-slide>
-                <div class="car">
+                <div class="car"  (click)="aceita()" >
                     <!-- <div class="foto">
                         <img src="../../assets/01(1).jpg" alt="" >
                     </div> -->
@@ -149,8 +149,8 @@
                 </div>
             </ion-slide>
         <ion-slide>
-                <div class="car">
-                    <div class="foto">
+                <div class="car"  (click)="aceita()" >
+                    <div class="foto2">
                         <img src="../../assets/01(2).jpg" alt="">
                     </div>
                     <div class="info">
@@ -171,8 +171,8 @@
                 </div>
             </ion-slide>
         <ion-slide>
-                <div class="car">
-                    <div class="foto">
+                <div class="car"  (click)="aceita()" >
+                    <div class="foto2">
                         <img src="../../assets/01(3).jpg" alt="">
                     </div>
                     <div class="info">
@@ -191,8 +191,8 @@
                 </div>
             </ion-slide>
         <ion-slide>
-                <div class="car">
-                    <div class="foto">
+                <div class="car"  (click)="aceita()" >
+                    <div class="foto2">
                         <img src="../../assets/01(4).jpg" alt="">
                     </div>
                     <div class="info">
@@ -266,6 +266,7 @@
 
 
 
+        </div>
         </div>
     </div>
 </ion-content>

@@ -406,6 +406,7 @@ box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
     justify-content: center;
     // border: solid;
     background-size: 100%;
+    padding: 5px;
     
     
 }
@@ -455,4 +456,7 @@ box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+.info{
+    padding: 10px;
 }
