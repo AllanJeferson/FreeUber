@@ -270,7 +270,7 @@ export class HomePage implements OnInit {
     } catch (error) {
       console.error(error);
     }
-    this.ok = " ";
+   
   }
 
 }

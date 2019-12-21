@@ -1,7 +1,6 @@
-
 <ion-content>
-    <!-- <div id="favoritos"> -->
-<!-- 
+    <!-- <div id="favoritos"> 
+
     <div class="telev">
 
         <img class="av1" src="../../assets/avatar.png">
@@ -18,9 +17,9 @@
 
         <img class="av1" src="../../assets/avatar.png">
 
-    </div>
+    </div> -->
 
-
+    <!-- 
     <div class="telev3">
 
         <img class="av1" src="../../assets/avatar.png">
@@ -34,14 +33,14 @@
 
     </div>
 
- -->
-
-    <!-- </div> -->
 
 
+    </div> -->
 
-    
-  
+
+
+
+
 
 
     <div #map>
@@ -55,7 +54,7 @@
             </div>
             <div class="dir"></div>
         </div>
-       
+
 
 
 
@@ -74,126 +73,136 @@
 
 
         <div class="request-car ion-padding ion-text-center" [hidden]="!destination">
-<div class="voltar">
-            <ion-button class="ion-margin-top" (click)="back()" color="dark" fill="clear" size="small"
-           >
-            <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
-        </ion-button>
-</div>
+            <div class="voltar">
+                <ion-button class="ion-margin-top" (click)="back()" color="dark" fill="clear" size="small">
+                    <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+                </ion-button>
+            </div>
 
 
             <span>Distancia {{allan}}</span>
 
             <span>Tempo médio de viagem {{yasmin}}</span>
-            <span>Valor médio dessa viagem {{media1}}</span>
+            <!-- <span>Valor médio dessa viagem {{media1}}</span> -->
 
-            <ion-list [hidden]="ok" >
+            <ion-list [hidden]="ok">
                 <ion-item>
-                  <ion-label>Motorista  Mulher</ion-label>
-                  <ion-toggle  color="primary"></ion-toggle>
-                </ion-item> 
-                
+                    <ion-label>Motorista Mulher</ion-label>
+                    <ion-toggle color="primary"></ion-toggle>
+                </ion-item>
+
                 <ion-item>
-                    <ion-label>Veiculo & lugares </ion-label>
-                    <ion-toggle  color="primary"></ion-toggle>
-                  </ion-item> 
-                  
-                  <ion-item>
+                    <ion-label>Veiculo 7 lugares </ion-label>
+                    <ion-toggle color="primary"></ion-toggle>
+                </ion-item>
+
+                <ion-item>
                     <ion-label>Porta-malas grande </ion-label>
                     <ion-toggle color="primary"></ion-toggle>
-                  </ion-item> 
-                  
-                  <ion-item>
+                </ion-item>
+
+                <ion-item>
                     <ion-label>Conforto / luxo</ion-label>
-                    <ion-toggle  color="primary"></ion-toggle>
-                  </ion-item>
-                  
-                  <ion-item>
+                    <ion-toggle color="primary"></ion-toggle>
+                </ion-item>
+
+                <ion-item>
                     <ion-label>Veiculo adapitado para cadeirante </ion-label>
-                    <ion-toggle  color="primary"></ion-toggle>
-                  </ion-item>
-       
-            <ion-button color="dark"   (click)="corrida()"  expand="block" style="
+                    <ion-toggle color="primary"></ion-toggle>
+                </ion-item>
+
+                <ion-button color="dark" (click)="corrida()" expand="block" style="
             width: 100%;     height: 30px;">
-                               OK
-                           </ion-button>
-                        </ion-list>
-            <div class="grid" [hidden]="!ok" >
+                    OK
+                </ion-button>
+            </ion-list>
+            <div class="grid" [hidden]="!ok">
                 <div class="car">
-                    <div class="foto">
-                        foto
+                    <!-- <div class="foto">
+                        <img src="../../assets/01(1).jpg" alt="" >
+                    </div> -->
+                    <div class="foto2">
+                        <img src="../../assets/01(1).jpg" alt="">
                     </div>
-                    <div class="desc">
-                        descrição do veiculo
-                    </div>
-                    <div class="tempo">
-                        tempo para chegar 02:00 valor {{valor1}}
-                    </div>
-                    <div class="but">
-                        <ion-button color="dark" expand="block" style="
-         width: 80%;     height: 30px;">
-                            Confirmar Corrida
-                        </ion-button>
+                    <div class="info">
+                        <div class="desc">
+                            <h3> Hyundai Elantra - 2015</h3>
+                        </div>
+                        <div class="cat"> Conforto / Luxo</div>
+
+                        <div class="tempo">
+                            Tempo para chegar 02:00
+                        </div>
+                        <div class="preco">
+                            <h2>R$ - {{valor1}} </h2>
+                        </div>
                     </div>
                 </div>
 
                 <div class="car">
-                        <div class="foto">
-                            foto
-                        </div>
+                    <div class="foto">
+                        <img src="../../assets/01(2).jpg" alt="">
+                    </div>
+                    <div class="info">
                         <div class="desc">
-                            descrição do veiculo
+                            <h3> Fiat Freemont - 2015</h3>
+                        </div>
+                        <div class="cat">
+                            <h4> 7 lugares </h4>
                         </div>
                         <div class="tempo">
-                            tempo para chegar 02:50 valor {{valor2}}
+                            Tempo para chegar 02:50
                         </div>
-                        <div class="but">
-                            <ion-button color="dark" expand="block" style="
-             width: 80%;    height: 30px;">
-                                Confirmar Corrida
-                            </ion-button>
+
+                        <div class="preco">
+                            <h2> R$ - {{valor2}}</h2>
                         </div>
                     </div>
+                </div>
 
 
-                    <div class="car">
-                            <div class="foto">
-                                foto
-                            </div>
-                            <div class="desc">
-                                descrição do veiculo
-                            </div>
-                            <div class="tempo">
-                                tempo para chegar 03:20 valor {{valor3}}
-                            </div>
-                            <div class="but">
-                                <ion-button color="dark" expand="block" style="
-                 width: 80%;    height: 30px;">
-                                    Confirmar Corrida
-                                </ion-button>
-                            </div>
+                <div class="car">
+                    <div class="foto">
+                        <img src="../../assets/01(3).jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="desc">
+                            <h3>Nissan March - 2016</h3>
                         </div>
+                        <div class="cat">Basico
+                        </div>
+                        <div class="tempo">
+                            tempo para chegar 03:20
+                        </div>
+                        <div class="preco">
+                            <h2> R$ - {{valor3}}</h2>
+                        </div>
+                    </div>
+                </div>
 
 
-                        <div class="car">
-                                <div class="foto">
-                                    foto
-                                </div>
-                                <div class="desc">
-                                    descrição do veiculo
-                                </div>
-                                <div class="tempo">
-                                    tempo para chegar 01:00 valor  {{valor4}}
-                                </div>
-                                <div class="but">
-                                    <ion-button color="dark" expand="block" style="
-                     width: 80%;    height: 30px;">
-                                        Confirmar Corrida
-                                    </ion-button>
-                                </div>
-                            </div>
+                <div class="car">
+                    <div class="foto">
+                        <img src="../../assets/01(4).jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <div class="desc">
+                            <h3>Honda Civic - 2015</h3>
 
-                           
+                        </div>
+                        <div class="cat"> Conforto / luxo
+                        </div>
+                        <div class="tempo">
+                            tempo para chegar 01:00
+
+                        </div>
+                        <div class="preco">
+                            <h2>R$ - {{valor4}}</h2>
+                        </div>
+                    </div>
+                </div>
+
+
 
 
             </div>
