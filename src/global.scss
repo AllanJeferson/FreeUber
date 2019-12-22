@@ -34,3 +34,7 @@
     }
 }
 
+.ion-margin-top, [margin-top] {
+    --margin-top: var(--ion-margin, 10px) !important;
+    margin-top: var(--ion-margin, 0px) !important;
+}

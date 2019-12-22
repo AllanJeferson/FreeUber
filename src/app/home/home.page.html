@@ -70,7 +70,7 @@
 
 
 
-
+<div  [hidden]="escolha" >
 
         <div class="request-car ion-padding ion-text-center" [hidden]="!destination">
             <div class="voltar">
@@ -79,12 +79,18 @@
                 </ion-button>
             </div>
 
+            <div class="car">
+              <div class="titi">
 
-            <span>Distancia {{allan}}</span>
-
-            <span>Tempo médio de viagem {{yasmin}}</span>
-            <!-- <span>Valor médio dessa viagem {{media1}}</span> -->
-
+              <div>
+                    <span>Distancia {{allan}}</span>
+                </div>
+                <div>
+                    <span>Tempo médio de viagem {{yasmin}}</span>
+                    <!-- <span>Valor médio dessa viagem {{media1}}</span> -->
+                </div>
+            </div>
+            </div>
             <ion-list [hidden]="ok">
                 <ion-item>
                     <ion-label>Motorista Mulher</ion-label>
@@ -110,14 +116,16 @@
                     <ion-label>Veiculo adapitado para cadeirante </ion-label>
                     <ion-toggle color="primary"></ion-toggle>
                 </ion-item>
-
-                <ion-button color="dark" (click)="corrida()" expand="block" style="
+                
+                <ion-button color="dark" (click)="presentLoading" expand="block" style="
             width: 100%;     height: 30px;">
                     OK
                 </ion-button>
             </ion-list>
             <div class="grid" [hidden]="!ok">
-                <div class="car">
+
+                
+                <div class="car"  (click)="aceita()" >
                     <!-- <div class="foto">
                         <img src="../../assets/01(1).jpg" alt="" >
                     </div> -->
@@ -126,83 +134,81 @@
                     </div>
                     <div class="info">
                         <div class="desc">
-                            <h3> Hyundai Elantra 2015</h3>
+                            Hyundai Elantra 2015
                         </div>
                         <div class="cat"> Conforto / Luxo</div>
 
                         <div class="tempo">
-                            Tempo para chegar 02:00
+                            Chegar em 02:00
                         </div>
                         <div class="preco">
-                            <h2>R$ - {{valor1}} </h2>
+                            R$ - {{valor1}} 
                         </div>
                     </div>
                 </div>
-
-                <div class="car">
-                    <div class="foto">
+            
+       
+                <div class="car"  (click)="aceita()" >
+                    <div class="foto2">
                         <img src="../../assets/01(2).jpg" alt="">
                     </div>
                     <div class="info">
                         <div class="desc">
-                            <h3> Fiat Freemont 2015</h3>
+                            Fiat Freemont 2015 
                         </div>
                         <div class="cat">
-                           7 lugares
+                            7 lugares
                         </div>
                         <div class="tempo">
-                            Tempo para chegar 02:50
+                           Chegar em 02:50
                         </div>
 
                         <div class="preco">
-                            <h2> R$ - {{valor2}}</h2>
+                              R$ - {{valor2}} 
                         </div>
                     </div>
                 </div>
-
-
-                <div class="car">
-                    <div class="foto">
+         
+                <div class="car"  (click)="aceita()" >
+                    <div class="foto2">
                         <img src="../../assets/01(3).jpg" alt="">
                     </div>
                     <div class="info">
                         <div class="desc">
-                            <h3>Nissan March 2016</h3>
+                           Nissan March 2016 
                         </div>
                         <div class="cat">Basico
                         </div>
                         <div class="tempo">
-                            tempo para chegar 03:20
+                            Chegar em 03:20
                         </div>
                         <div class="preco">
-                            <h2> R$ - {{valor3}}</h2>
+                              R$ - {{valor3}} 
                         </div>
                     </div>
                 </div>
-
-
-                <div class="car">
-                    <div class="foto">
+         
+                <div class="car"  (click)="aceita()" >
+                    <div class="foto2">
                         <img src="../../assets/01(4).jpg" alt="">
                     </div>
                     <div class="info">
                         <div class="desc">
-                            <h3>Honda Civic 2015</h3>
+                           Honda Civic 2015 
 
                         </div>
                         <div class="cat"> Conforto / luxo
                         </div>
                         <div class="tempo">
-                            tempo para chegar 01:00
+                            Chegar em 01:00
 
                         </div>
                         <div class="preco">
-                            <h2>R$ - {{valor4}}</h2>
+                             R$ - {{valor4}} 
                         </div>
                     </div>
                 </div>
-
-
+            
 
 
             </div>
@@ -256,6 +262,7 @@
 
 
 
+        </div>
         </div>
     </div>
 </ion-content>
