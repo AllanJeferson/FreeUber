@@ -58,11 +58,13 @@ export class HomePage implements OnInit {
   valor33: any;
   public media: any;
   public media1: any;
-  public ok:  string = "" ;
+  public ok: string = "";
   public ok1: string;
   public escolha: string;
-  
-  
+  public loadingController: LoadingController;
+
+
+
 
 
 
@@ -75,7 +77,7 @@ export class HomePage implements OnInit {
   option1 = {
     loop: false,
     direction: 'vertical'
-};
+  };
 
   ngOnInit() {
     this.mapElement = this.mapElement.nativeElement;
@@ -161,7 +163,7 @@ export class HomePage implements OnInit {
     });
 
   }
-  
+
   async calcRoute(item: any) {
     this.search = '';
     this.destination = item;
@@ -191,7 +193,7 @@ export class HomePage implements OnInit {
       const distancia = results.routes[0].legs[0].distance;
 
       distancia.text;
-      
+
       this.allan = distancia.text
 
       this.valor = distancia.value
@@ -209,8 +211,8 @@ export class HomePage implements OnInit {
       this.valor3 = this.valor22.toFixed(2)
       this.valor4 = this.valor33.toFixed(2)
 
-      this.media=(this.valor + this.valor11 + this.valor22 + this.valor33) / 4 
-      this.media1=this.media.toFixed(2)
+      this.media = (this.valor + this.valor11 + this.valor22 + this.valor33) / 4
+      this.media1 = this.media.toFixed(2)
 
       const tempo = results.routes[0].legs[0].duration;
 
@@ -252,34 +254,59 @@ export class HomePage implements OnInit {
 
 
   }
- 
- 
 
-  async corrida()
-  {
+
+
+  async corrida() {
     this.ok = "";
-   
+
     this.ok = 'teste';
   }
+
+
+  // async aceita() {
+    
+
   
 
-  async aceita()
-  {
-    this.escolha = "";
-   
-    this.escolha = 'teste';
+    
+  // }
+
+  async presentLoading() {
+    const loading = await this.loadingController.create({
+      message: 'Hellooo',
+      duration: 2000
+    });
+    await loading.present();
+
+    const { role, data } = await loading.onDidDismiss();
+
+    console.log('Loading dismissed!');
   }
 
-  async back() {
-    try {
-      await this.map.clear();
-      this.destination = null;
-      this.ok = null ;
-      this.addOriginMarker();
-    } catch (error) {
-      console.error(error);
-    }
-   
+  async presentLoadingWithOptions() {
+    const loading = await this.loadingController.create({
+      spinner: null,
+      duration: 5000,
+      message: 'Please wait...',
+      translucent: true,
+      cssClass: 'custom-class custom-loading'
+    });
+    return await loading.present();
   }
+
+  
+
+async back() {
+  try {
+    await this.map.clear();
+    this.destination = null;
+    this.ok = null;
+    this.addOriginMarker();
+  } catch (error) {
+    console.error(error);
+  }
+
+}
 
 }
