@@ -266,11 +266,11 @@ export class HomePage implements OnInit {
 
   // async aceita() {
     
+  //   this.ok = "";
 
+  //   this.ok = 'teste';
   
-
-    
-  // }
+  //  }
 
   async presentLoading() {
     const loading = await this.loadingController.create({
