@@ -302,6 +302,7 @@ async back() {
     await this.map.clear();
     this.destination = null;
     this.ok = null;
+    this.escolha = null;
     this.addOriginMarker();
   } catch (error) {
     console.error(error);

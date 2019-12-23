@@ -92,6 +92,7 @@
             </div>
             </div>
             <ion-list [hidden]="ok">
+                
                 <ion-item>
                     <ion-label>Motorista Mulher</ion-label>
                     <ion-toggle color="primary"></ion-toggle>
@@ -123,7 +124,7 @@
                 </ion-button>
             </ion-list>
             <div class="grid" [hidden]="!ok">
-
+               
                 
                 <div class="car"  (click)="aceita()" >
                     <!-- <div class="foto">
@@ -263,6 +264,14 @@
 
 
         </div>
+        </div>
+
+        <div class="corr" [hidden]="!escolha">
+        <div class="bot"><ion-button class="ion-margin-top" (click)="back()" color="dark" fill="clear" size="small">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </div>
+            Aqui vai entra as informações da corrira 
         </div>
     </div>
 </ion-content>

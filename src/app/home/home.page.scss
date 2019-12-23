@@ -3,29 +3,30 @@ ion-searchbar {
     --border-radius: 15px;
 }
 
-.topo{
-display: flex;
-position: relative;
-justify-content: space-around;
-margin-left: 10px;
-margin-right: 10px;
+.topo {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 
-.menu{
-display: flex;
-position: relative;
-width: 10%;
-align-items: center;
+.menu {
+    display: flex;
+    position: relative;
+    width: 10%;
+    align-items: center;
     justify-content: center;
 }
-.bus{
+
+.bus {
     display: flex;
     position: relative;
     width: 80%;
 }
 
-.dir{
+.dir {
     display: flex;
     position: relative;
     width: 10%;
@@ -110,12 +111,12 @@ ion-list,
     height: 100%;
     width: 100%;
     background-color: rgba(255, 208, 1, 0.363);
-    
+
 
 
     img {
         width: 150px;
-        
+
     }
 
 
@@ -362,7 +363,7 @@ ion-list,
 
 
 
-.grid{
+.grid {
     // background-color: bisque;
     display: -webkit-box;
     display: flex;
@@ -374,11 +375,11 @@ ion-list,
     width: 100%;
     /* height: 204px; */
     flex-wrap: wrap;
- 
+
 }
 
 
-.car{
+.car {
     display: -webkit-box;
     display: flex;
     position: relative;
@@ -392,12 +393,12 @@ ion-list,
     background-color: aliceblue;
     border-radius: 20px;
     margin: 5px;
-    -webkit-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
--moz-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
-box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
+    -webkit-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.42);
+    -moz-box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.42);
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.42);
 }
 
-.foto2{
+.foto2 {
     display: -webkit-box;
     display: flex;
     position: relative;
@@ -409,10 +410,11 @@ box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
     background-size: 100%;
     width: 48%;
 
-    
-    
+
+
 }
-.desc{
+
+.desc {
     display: -webkit-box;
     display: flex;
     position: relative;
@@ -423,16 +425,18 @@ box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
     font-weight: bold;
 
 }
-.tempo{
+
+.tempo {
     display: -webkit-box;
     display: flex;
     position: relative;
-   // width: 320px;
+    // width: 320px;
     // border: solid;
     align-items: center;
     justify-content: center;
 }
-.but{
+
+.but {
     display: -webkit-box;
     display: flex;
     position: relative;
@@ -442,7 +446,7 @@ box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
     justify-content: center;
 }
 
-.voltar{
+.voltar {
     display: -webkit-box;
     display: flex;
     position: relative;
@@ -451,8 +455,9 @@ box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
     align-items: flex-start;
     justify-content: flex-start;
 }
-.titi{
-     display: -webkit-box;
+
+.titi {
+    display: -webkit-box;
     display: flex;
     position: relative;
     font-weight: bold;
@@ -461,10 +466,32 @@ box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.42);
     justify-content: center;
     flex-wrap: wrap;
 }
-.info{
+
+.info {
     padding: 5px;
     width: 48%;
 }
-.preco{
+
+.preco {
     font-weight: bold;
+}
+
+.corr {
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    bottom: 0px;
+    background-color: rgba(255, 255, 255, 0.534);
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+.bot{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: flex-start;
 }
