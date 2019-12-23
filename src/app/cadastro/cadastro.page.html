@@ -1,0 +1,30 @@
+
+<ion-content>
+
+  <ion-card class="login-card" justify-content-center align-items-center>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+      <form #form='ngForm' novalidate>
+      <ion-item>
+        <ion-label position="stacked">Nome</ion-label>
+        <ion-input type="text" placeholder="Insira seu Nome" [(ngModel)]="user.name" #name="ngModel"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Login</ion-label>
+        <ion-input type="text" placeholder="Insira seu Login" [(ngModel)]="user.email" #email="ngModel" [brmasker]="{mask:'(00) 00000-0000', len:15}" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Senha</ion-label>
+        <ion-input type="password" pattern="password" [(ngModel)]="user.password" #password="ngModel" placeholder="Insira sua Senha" required></ion-input>
+      </ion-item>
+    </form>
+    </ion-card-content>
+    <ion-footer>
+      <ion-toolbar>
+         <ion-buttons slot="end"><ion-button>Registrar</ion-button></ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-card>
+
+</ion-content>

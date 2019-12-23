@@ -1,0 +1,16 @@
+@media (orientation: landscape){
+    .login-card{
+        width: 95%;
+        margin: auto;
+        margin-top: 10%;
+        margin-bottom: auto;
+    }
+}
+@media (orientation: portrait){
+    .login-card{
+        width: 95%;
+        margin: auto;
+        margin-top: 65%;
+        margin-bottom: auto;
+    }
+}

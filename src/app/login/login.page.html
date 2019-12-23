@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-fab horizontal="center" vertical="end">
+    <ion-title size="large">FREE YOU</ion-title>
+  </ion-fab>
+  <ion-card class="login-card" justify-content-center align-items-center>
+    <ion-card-header>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="stacked">Login</ion-label>
+        <ion-input type="text" placeholder="Insira seu Numero de Telefone"
+          [brmasker]="{mask:'(00) 00000-0000', len:15}"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Senha</ion-label>
+        <ion-input type="password" pattern="password" placeholder="Insira sua Senha"></ion-input>
+      </ion-item>
+    </ion-card-content>
+    <ion-footer>
+      <ion-toolbar>
+         <ion-buttons slot="end"><ion-button>Entrar</ion-button></ion-buttons>
+        <ion-buttons (click)="Cadastro()" slot="start"><ion-button>Cadastre-se</ion-button></ion-buttons>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-card>
+
+</ion-content>
