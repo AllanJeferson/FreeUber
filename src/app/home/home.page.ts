@@ -62,6 +62,7 @@ export class HomePage implements OnInit {
   public ok1: string;
   public escolha: string;
   public loadingController: LoadingController;
+  
 
 
 
@@ -73,11 +74,17 @@ export class HomePage implements OnInit {
     private loadingCtrl: LoadingController,
     private ngZone: NgZone
   ) {}
-
+  
   // option1 = {
   //   loop: false,
   //   direction: 'vertical'
   // };
+
+
+sair(){
+  navigator['app'].exitApp();
+}
+
 
   ngOnInit() {
     this.mapElement = this.mapElement.nativeElement;
@@ -174,7 +181,8 @@ export class HomePage implements OnInit {
     });
 
 
-
+   
+    
     let markerDestination: Marker = this.map.addMarkerSync({
       title: this.destination.description,
       icon: '#000',
@@ -246,7 +254,7 @@ export class HomePage implements OnInit {
       await this.map.moveCamera({
         target: points
       });
-      this.map.panBy(0, 100);
+      this.map.panBy(0, -100);
 
 
 
@@ -271,6 +279,9 @@ export class HomePage implements OnInit {
     this.escolha = 'teste';
   
    }
+
+
+
 
   // async presentLoading() {
   //   const loading = await this.loadingController.create({
@@ -307,7 +318,8 @@ async back() {
   } catch (error) {
     console.error(error);
   }
-
+  
+ 
 }
 
 }
