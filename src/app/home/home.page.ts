@@ -74,10 +74,10 @@ export class HomePage implements OnInit {
     private ngZone: NgZone
   ) {}
 
-  option1 = {
-    loop: false,
-    direction: 'vertical'
-  };
+  // option1 = {
+  //   loop: false,
+  //   direction: 'vertical'
+  // };
 
   ngOnInit() {
     this.mapElement = this.mapElement.nativeElement;
@@ -264,36 +264,36 @@ export class HomePage implements OnInit {
   }
 
 
-  // async aceita() {
+  async aceita() {
     
-  //   this.ok = "";
+    this.escolha = "";
 
-  //   this.ok = 'teste';
+    this.escolha = 'teste';
   
-  //  }
+   }
 
-  async presentLoading() {
-    const loading = await this.loadingController.create({
-      message: 'Hellooo',
-      duration: 2000
-    });
-    await loading.present();
+  // async presentLoading() {
+  //   const loading = await this.loadingController.create({
+  //     message: 'Hellooo',
+  //     duration: 2000
+  //   });
+  //   await loading.present();
 
-    const { role, data } = await loading.onDidDismiss();
+  //   const { role, data } = await loading.onDidDismiss();
 
-    console.log('Loading dismissed!');
-  }
+  //   console.log('Loading dismissed!');
+  // }
 
-  async presentLoadingWithOptions() {
-    const loading = await this.loadingController.create({
-      spinner: null,
-      duration: 5000,
-      message: 'Please wait...',
-      translucent: true,
-      cssClass: 'custom-class custom-loading'
-    });
-    return await loading.present();
-  }
+  // async presentLoadingWithOptions() {
+  //   const loading = await this.loadingController.create({
+  //     spinner: null,
+  //     duration: 5000,
+  //     message: 'Please wait...',
+  //     translucent: true,
+  //     cssClass: 'custom-class custom-loading'
+  //   });
+  //   return await loading.present();
+  // }
 
   
 
