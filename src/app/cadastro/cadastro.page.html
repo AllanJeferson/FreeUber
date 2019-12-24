@@ -7,10 +7,6 @@
     <ion-card-content>
       <form #form='ngForm' novalidate>
       <ion-item>
-        <ion-label position="stacked">Nome</ion-label>
-        <ion-input type="text" placeholder="Insira seu Nome" [(ngModel)]="user.name" #name="ngModel"></ion-input>
-      </ion-item>
-      <ion-item>
         <ion-label position="stacked">Login</ion-label>
         <ion-input type="text" placeholder="Insira seu Login" [(ngModel)]="user.email" #email="ngModel" [brmasker]="{mask:'(00) 00000-0000', len:15}" required></ion-input>
       </ion-item>
@@ -22,7 +18,7 @@
     </ion-card-content>
     <ion-footer>
       <ion-toolbar>
-         <ion-buttons slot="end"><ion-button>Registrar</ion-button></ion-buttons>
+         <ion-buttons slot="end" (click)="CriarConta()"><ion-button>Registrar</ion-button></ion-buttons>
       </ion-toolbar>
     </ion-footer>
   </ion-card>

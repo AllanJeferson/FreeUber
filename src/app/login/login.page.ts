@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
 import { NavController } from '@ionic/angular';
-import { CadastroPage } from '../cadastro/cadastro.page';
 
-
+interface User {
+ email: string;
+ password: string;
+}
 
 @Component({
   selector: 'app-login',
@@ -11,19 +14,31 @@ import { CadastroPage } from '../cadastro/cadastro.page';
 })
 export class LoginPage implements OnInit {
 
-  constructor(public Nav: NavController) { }
+  user: User = {
+    email: 'test@test.com.br',
+    password: 'test',
+  };
 
+  constructor( public afAuth: AngularFireAuth, public Nav: NavController) { }
 
+  async login() {
+    const user = await this.afAuth.auth.signInWithEmailAndPassword(
+      this.user.email,
+      this.user.password,
+    );
+    console.log(user);
+  }
 
-
-  ngOnInit() {
+  async logout() {
+    await this.afAuth.auth.signOut();
   }
 
   Cadastro() {
     this.Nav.navigateForward('/cadastro');
-
   }
 
+  ngOnInit() {
+  }
 }
 
 

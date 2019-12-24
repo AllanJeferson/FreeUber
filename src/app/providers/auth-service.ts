@@ -2,7 +2,12 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
 import { Observable } from 'rxjs';
-import { User } from './user';
+
+interface User {
+   name: string;
+   email: string;
+   password: string;
+}
 
 @Injectable()
 export class AuthService {

@@ -1,9 +1,12 @@
 import { NavController, ToastController } from '@ionic/angular';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { User } from '../providers/user';
-import { AuthService } from '../providers/auth-service';
 import { NgForm } from '@angular/forms';
+import { AngularFireAuth } from '@angular/fire/auth';
 
+interface User {
+  email?: string;
+  password?: string;
+}
 
 @Component({
   selector: 'app-cadastro',
@@ -13,26 +16,28 @@ import { NgForm } from '@angular/forms';
 
 export class CadastroPage implements OnInit {
   @ViewChild('form', {
-    static: false
-  }) form: NgForm;
-  user: User = new User();
+      static: true
+    }) form: NgForm;
+    user: User;
 
   constructor(
-    public NavCtrl: NavController,
-    private toastCtrl: ToastController,
-    private authSevice: AuthService,
+    public afAuth: AngularFireAuth,
   ) {   }
-  CriarConta() {
-    if (this.form.form.valid) {
-      this.authSevice.CriarUsuario(this.user)
-      .then((user: any) => {
-        alert('Cadastro Efetuado Com Sucesso!!!');
-      })
-      .catch();
-     }
+  async CriarConta() {
+   const user = await this.afAuth.auth.createUserWithEmailAndPassword(
+     this.user.email,
+     this.user.password,
+   );
+
+
   }
 
   ngOnInit() {
+   const user = {
+     email: '',
+     password: '',
+   };
+
   }
 
 }
