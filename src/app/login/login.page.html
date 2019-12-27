@@ -8,18 +8,18 @@
     <ion-card-content>
       <ion-item>
         <ion-label position="stacked">Login</ion-label>
-        <ion-input type="text" placeholder="Insira seu Numero de Telefone"
-          [brmasker]="{mask:'(00) 00000-0000', len:15}"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.email" placeholder="Insira seu E-mail Cadastrado"
+          ></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Senha</ion-label>
-        <ion-input type="password" pattern="password" placeholder="Insira sua Senha"></ion-input>
+        <ion-input type="password" pattern="password"  [(ngModel)]="user.password"  placeholder="Insira sua Senha"></ion-input>
       </ion-item>
     </ion-card-content>
     <ion-footer>
       <ion-toolbar>
-         <ion-buttons slot="end"><ion-button>Entrar</ion-button></ion-buttons>
-        <ion-buttons (click)="Cadastro()" slot="start"><ion-button>Cadastre-se</ion-button></ion-buttons>
+         <ion-buttons slot="end"><ion-button (click)="login()">Entrar</ion-button></ion-buttons>
+        <ion-buttons  slot="start"><ion-button (click)="Cadastro()">Cadastre-se</ion-button></ion-buttons>
       </ion-toolbar>
     </ion-footer>
   </ion-card>
