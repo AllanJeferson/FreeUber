@@ -46,7 +46,9 @@
     <div #map>
 
         <div class="topo" [hidden]="destination">
-            <div class="menu">canto </div>
+            <div class="menu">  <ion-button class="ion-margin-top" (click)="sair()" color="dark" fill="clear" size="small">
+               Sair
+            </ion-button></div>
             <div class="bus">
 
                 <ion-searchbar [(ngModel)]="search" (ionChange)="searchChanged()" placeholder="Para onde?">
@@ -124,6 +126,7 @@
                 </ion-button>
             </ion-list>
             <div class="grid" [hidden]="!ok">
+                
                
                 
                 <div class="car"  (click)="aceita()" >
