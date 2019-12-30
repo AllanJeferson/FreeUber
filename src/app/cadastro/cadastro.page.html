@@ -5,22 +5,14 @@
     <ion-card-header>
     </ion-card-header>
     <ion-card-content>
-      <form>
+      <form #form='ngForm' novalidate>
       <ion-item>
-        <ion-label position="stacked">Nome</ion-label>
-        <ion-input type="text" name="username" placeholder="Insira seu Nome" [(ngModel)]="user.username" #email="ngModel" [ngModelOptions]="{standalone: true}" required></ion-input>
+        <ion-label position="stacked">Login</ion-label>
+        <ion-input type="text" placeholder="Insira seu Login" [(ngModel)]="user.email" #email="ngModel" [brmasker]="{mask:'(00) 00000-0000', len:15}" required></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">Senha</ion-label>
-        <ion-input type="password" name="password" pattern="password" [(ngModel)]="user.password" #password="ngModel" placeholder="Insira sua Senha" [ngModelOptions]="{standalone: true}" required></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Login</ion-label>
-        <ion-input type="text" name="email" placeholder="Insira seu Login" [(ngModel)]="user.email" #email="ngModel" [ngModelOptions]="{standalone: true}" required></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Telefone</ion-label>
-        <ion-input type="text" name="phone" pattern="phone" [(ngModel)]="user.phone" #password="ngModel" placeholder="Insira seu Telefone"  [brmasker]="{mask:'(00) 00000-0000', len:15}" [ngModelOptions]="{standalone: true}" required></ion-input>
+        <ion-input type="password" pattern="password" [(ngModel)]="user.password" #password="ngModel" placeholder="Insira sua Senha" required></ion-input>
       </ion-item>
     </form>
     </ion-card-content>
