@@ -17,6 +17,7 @@
       </ion-item>
     </ion-card-content>
     <ion-footer>
+      <div class="form-error">{{user.loginError}}</div>
       <ion-toolbar>
          <ion-buttons slot="end"><ion-button (click)="login()">Entrar</ion-button></ion-buttons>
         <ion-buttons  slot="start"><ion-button (click)="Cadastro()">Cadastre-se</ion-button></ion-buttons>
