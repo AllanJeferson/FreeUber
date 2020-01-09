@@ -23,7 +23,7 @@ export class LoginPage implements OnInit {
   };
 
   constructor( public afAuth: AngularFireAuth, public Nav: NavController) { }
- 
+
 
   async login() {
     const user = await this.afAuth.auth.signInWithEmailAndPassword(
@@ -31,9 +31,10 @@ export class LoginPage implements OnInit {
       this.user.password,
     ).then(
       () => this.Nav.navigateForward('home'),
-      error => this.user.loginError = "E-mail ou Senha Invalidos"
+      error => this.user.loginError = 'E-mail ou Senha Invalidos'
     );
 // bem vindo {{afAuth.auth.currentUser.displayName}} para mostrar o nome
+    console.log( this.afAuth.auth.currentUser);
   }
 
   // async logout() {
